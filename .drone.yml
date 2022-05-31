@@ -6,12 +6,12 @@ name: AtomX Pipeline
 
 steps:
  - name: compilation
-   image: atomxorg/ubuntu:latest
+   image: atomxorg/arch-linux:latest
    environment:
      TOKEN:
        from_secret: BOT_API_KEY
      GITHUB_TOKEN:
        from_secret: GITHUB_TOKEN
    commands:
-      - /noclone3 bash init.sh
-      - /noclone3 bash $HOME/kernel/asus.sh
+      - bash init.sh
+      - bash $HOME/kernel/asus.sh

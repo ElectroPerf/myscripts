@@ -8,10 +8,10 @@ jobs:
   atom-x-kernel:
     runs-on: ubuntu-latest
     container:
-      image: atomxorg/ubuntu:latest
+      image: atomxorg/arch-linux:latest
     steps:
     - uses: actions/checkout@v2
     - name: Clone Kernel Source
-      run: /noclone3 bash init.sh
+      run: bash init.sh
     - name: Start Compilation
-      run: /noclone3 bash $HOME/kernel/asus.sh
+      run: bash $HOME/kernel/asus.sh
